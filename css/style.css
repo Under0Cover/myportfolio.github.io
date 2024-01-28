@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    max-height: 100vh;
+    background-color: #1F252E;
+}
+
+header {
+    padding: 1.7rem 1rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: auto;
+    align-items: center;
+    background-color: transparent;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: .97rem;
+    font-weight: 600;
+    letter-spacing: .7px;
+    padding: 1rem;
+    padding: 0.4rem 1rem;
+}
+
+nav a.active,
+nav a:hover {
+    color: #00E8F8;
+    border-radius: 1rem;
+    transition: all.3s ease-in-out;
+}
+
+#click {
+    display: none;
+}
+
+.menu i {
+    color: #00E8F8;
+}
+
+.menu {
+    display: none;
+}
+
+section {
+    margin: 2rem 8.5rem;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem auto;
+}
+
+.main h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    animation: check 2s ease forwards;
+    animation-delay: .5s;
+}
+
+.name {
+    color:#00E8F8;
+}
+
+.main p {
+    margin-top: 1rem;
+    font-size: .98rem;
+    color: #fff;
+}
+
+hr {
+    color: #00E8F8;
+    margin-top: 10px;
+    size: 2px;
+    width: 100%;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    margin-top: 1.7rem;
+}
+
+.social a {
+    color: #00E8F8;
+    font-size: 1rem;
+    border: 1.6px solid #00E8F8;
+    border-radius: 50%;
+    padding: .35rem;
+    text-align: center;
+    width: 26px;
+}
+
+.social a:hover {
+    color: #1F252E;
+    background-color: #00E8F8;
+    box-shadow: 0 0 20px #00E8F8;
+    transition: all .3s ease-in-out;
+}
+
+.main h1 span:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+.main h1 span:nth-child(2) {
+    color: #00E8F8;
+}
+
+.images {
+    -webkit-box-shadow: 0 10px 10px -10px #000000;
+    -moz-box-shadow: 0 10px 10px -10px #000000;
+    box-shadow: 0px 16px 4px -10px #00E8F8;
+    width: 500px;
+}
+
+.images > img {
+    display: inline;
+    position: relative;
+    right: -120px;
+}
+
+footer {
+    padding: 30px;
+}
+
+/* for all pages */
+.h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+/* page 'About Me' */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem auto;
+    margin-top: 0;
+}
+
+.container p {
+    margin-top: 1rem;
+    font-size: .98rem;
+    color: #fff;
+}
+
+.aboutmea {
+    color: #00FFFF;
+}
+
+/* page 'Skills' */  
+.skilllist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.skill-col1 {
+    max-width: 400px;
+    font-size: 20px;
+}
+
+.skill-col2 {
+    columns: 3;
+    column-gap: 50px;
+}
+
+.skill-columns p {
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px 20px 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px #00E8F8;
+}
+  
+.skill-columns span {
+    font-weight: 699;
+    padding: 5px;
+}
+
+/* page 'Portfolio' */
+.content {
+    display: inline-block;
+    width: 100%;
+    margin: 10px;
+}
+
+.imag {
+    margin-top: 15px;
+}
+
+.imag > img {
+	width: 50%;
+    float: left;
+}
+
+.info > p {
+    color: #fff;
+    width: 45%;
+    float: right;
+}
+
+@keyframes check {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .menu {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #244D61;
+    }
+
+    header {
+        padding: 0.7rem 1rem;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    nav {
+        position: absolute;
+        display: grid;
+        top: 75px;
+        text-align: center;
+        background-color: #1F252E;
+        left: -100%;
+        z-index: 1;
+        width: 100%;
+    }
+
+    #click:checked~nav {
+        left: 0%;
+        transition: all 0.3s ease;
+    }
+
+    section {
+        margin: 1rem 1.5rem;
+    }
+
+    footer{
+        padding: 3px;
+    }
+
+    .skill-columns p {
+        font-size: 10px;
+        padding: 5px;
+        border-radius: 10px 20px 15px;
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 5px #00E8F8;
+    }
+
+}
